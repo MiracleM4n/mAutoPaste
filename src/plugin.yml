@@ -1,0 +1,8 @@
+name: AutoPaste
+main: net.D3GN.MiracleM4n.AutoPaste.AutoPaste
+load: startup
+version: 1.7.1
+author: MiracleM4n
+website: http://d3gn.net/
+thread: http://forums.bukkit.org/threads/22958/
+description: Chat API with more.
