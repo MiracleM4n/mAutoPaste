@@ -34,7 +34,6 @@ public class mAutoPaste extends JavaPlugin {
         PluginDescriptionFile pdfFile = getDescription();
 
         Log.setFilter(new Filter() {
-            @SuppressWarnings({"ThrowableResultOfMethodCallIgnored"})
             public boolean isLoggable(LogRecord record) {
                 if (record.getLevel().getName().contains("SEVERE")) {
                     try {
