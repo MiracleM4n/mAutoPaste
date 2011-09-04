@@ -1,10 +1,9 @@
-package net.D3GN.MiracleM4n.AutoPaste;
+package net.D3GN.MiracleM4n.mAutoPaste;
 
 import org.bukkit.craftbukkit.CraftServer;
 import org.bukkit.craftbukkit.command.ColouredConsoleSender;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
-import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.*;
@@ -16,7 +15,7 @@ import java.util.logging.Level;
 import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
-public class AutoPaste extends JavaPlugin {
+public class mAutoPaste extends JavaPlugin {
 
     //Console & Logger
     public static Logger Log = Logger.getLogger("Minecraft");
@@ -35,6 +34,7 @@ public class AutoPaste extends JavaPlugin {
         PluginDescriptionFile pdfFile = getDescription();
 
         Log.setFilter(new Filter() {
+            @SuppressWarnings({"ThrowableResultOfMethodCallIgnored"})
             public boolean isLoggable(LogRecord record) {
                 if (record.getLevel().getName().contains("SEVERE")) {
                     try {
@@ -50,9 +50,9 @@ public class AutoPaste extends JavaPlugin {
                         errorThrown.printStackTrace(new PrintWriter(sw));
                         String stackTrace = sw.toString();
 
-                        String[] splitMessage = record.getMessage().toString().split(" ");
+                        String[] splitMessage = record.getMessage().split(" ");
 
-                        ThrownPaste = "Error:" + '\n' + record.getMessage().toString() + '\n' + stackTrace;
+                        ThrownPaste = "Error:" + '\n' + record.getMessage() + '\n' + stackTrace;
                         PluginNamePaste = splitMessage[splitMessage.length - 1];
                         CBVersionPaste = getServer().getName() + " Version: " + '\n' + getServer().getVersion();
 

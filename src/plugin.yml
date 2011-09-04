@@ -1,5 +1,5 @@
-name: AutoPaste
-main: net.D3GN.MiracleM4n.AutoPaste.AutoPaste
+name: mAutoPaste
+main: net.D3GN.MiracleM4n.mAutoPaste.mAutoPaste
 load: startup
 version: 1.7.1
 author: MiracleM4n
