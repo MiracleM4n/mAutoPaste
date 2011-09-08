@@ -43,6 +43,7 @@ public class mAutoPaste extends JavaPlugin {
                         CBVersionPaste = "";
                         PluginInfoPaste = "";
                         FinalPaste = "";
+
                         //Parse Vars
                         Throwable errorThrown = record.getThrown();
                         StringWriter sw = new StringWriter();
