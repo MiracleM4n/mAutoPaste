@@ -58,9 +58,8 @@ public class mAutoPaste extends JavaPlugin {
 
                         Plugin pluginTest = getServer().getPluginManager().getPlugin(PluginNamePaste);
 
-                        if (pluginTest != null) {
+                        if (pluginTest != null)
                             PluginInfoPaste = "Plugin Name: " + pluginTest.getDescription().getName() + '\n' + "Plugin Version: " + pluginTest.getDescription().getVersion() + '\n' + "Plugin Author: " + pluginTest.getDescription().getAuthors();
-                        }
 
                         FinalPaste = CBVersionPaste + '\n' + '\n' + PluginInfoPaste + '\n' + '\n' + ThrownPaste;
 
