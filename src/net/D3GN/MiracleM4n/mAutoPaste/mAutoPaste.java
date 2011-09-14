@@ -19,7 +19,7 @@ public class mAutoPaste extends JavaPlugin {
 
     //Console & Logger
     public static Logger Log = Logger.getLogger("Minecraft");
-    ColouredConsoleSender console = null;
+    Logger console = null;
 
     //Strings
     String ThrownPaste;
@@ -30,7 +30,7 @@ public class mAutoPaste extends JavaPlugin {
 
     public void onEnable() {
         // Default plugin data
-        console = new ColouredConsoleSender((CraftServer) getServer());
+        console = getServer().getLogger();
         PluginDescriptionFile pdfFile = getDescription();
 
         Log.setFilter(new Filter() {
@@ -100,12 +100,12 @@ public class mAutoPaste extends JavaPlugin {
             }
         });
 
-        console.sendMessage((pdfFile.getName()) +  " version " + pdfFile.getVersion() + " is enabled!");
+        console.log(Level.INFO, (pdfFile.getName()) +  " version " + pdfFile.getVersion() + " is enabled!");
     }
 
     public void onDisable() {
         PluginDescriptionFile pdfFile = getDescription();
 
-        console.sendMessage((pdfFile.getName()) +  " version " + pdfFile.getVersion() + " is disabled!");
+        console.log(Level.INFO, (pdfFile.getName()) +  " version " + pdfFile.getVersion() + " is disabled!");
     }
 }
