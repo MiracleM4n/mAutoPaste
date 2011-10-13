@@ -1,7 +1,5 @@
 package net.D3GN.MiracleM4n.mAutoPaste;
 
-import org.bukkit.craftbukkit.CraftServer;
-import org.bukkit.craftbukkit.command.ColouredConsoleSender;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -34,6 +32,7 @@ public class mAutoPaste extends JavaPlugin {
         PluginDescriptionFile pdfFile = getDescription();
 
         Log.setFilter(new Filter() {
+            @SuppressWarnings({"ThrowableResultOfMethodCallIgnored"})
             public boolean isLoggable(LogRecord record) {
                 if (record.getLevel().getName().contains("SEVERE")) {
                     try {
