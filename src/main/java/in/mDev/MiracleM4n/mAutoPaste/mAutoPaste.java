@@ -1,4 +1,4 @@
-package net.D3GN.MiracleM4n.mAutoPaste;
+package in.mDev.MiracleM4n.mAutoPaste;
 
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
@@ -70,10 +70,13 @@ public class mAutoPaste extends JavaPlugin {
                         // Send data
                         URL url = new URL("http://pastebin.com/api/api_post.php");
                         HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+
                         conn.setDoOutput(true);
                         conn.setDoInput(true);
                         conn.setRequestMethod("POST");
+
                         OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
+
                         wr.write(data);
                         wr.flush();
 
