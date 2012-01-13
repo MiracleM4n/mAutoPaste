@@ -14,10 +14,11 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 public class mAutoPaste extends JavaPlugin {
+    // Default plugin data
+    PluginDescriptionFile pdfFile;
 
-    //Console & Logger
+    // Logger
     public static Logger Log = Logger.getLogger("Minecraft");
-    Logger console = null;
 
     //Strings
     String ThrownPaste;
@@ -28,8 +29,7 @@ public class mAutoPaste extends JavaPlugin {
 
     public void onEnable() {
         // Default plugin data
-        console = getServer().getLogger();
-        PluginDescriptionFile pdfFile = getDescription();
+        pdfFile = getDescription();
 
         Log.setFilter(new Filter() {
             @SuppressWarnings({"ThrowableResultOfMethodCallIgnored"})
@@ -102,12 +102,12 @@ public class mAutoPaste extends JavaPlugin {
             }
         });
 
-        console.log(Level.INFO, (pdfFile.getName()) +  " version " + pdfFile.getVersion() + " is enabled!");
+        System.out.println("[" + (pdfFile.getName()) + "]" + " version " +
+                pdfFile.getVersion() + " is enabled!");
     }
 
     public void onDisable() {
-        PluginDescriptionFile pdfFile = getDescription();
-
-        console.log(Level.INFO, (pdfFile.getName()) +  " version " + pdfFile.getVersion() + " is disabled!");
+        System.out.println("[" + (pdfFile.getName()) + "]" + " version " +
+                pdfFile.getVersion() + " is disabled!");
     }
 }
