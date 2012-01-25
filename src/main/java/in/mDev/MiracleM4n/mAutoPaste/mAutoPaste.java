@@ -1,17 +1,11 @@
 package in.mDev.MiracleM4n.mAutoPaste;
 
-import org.bukkit.plugin.Plugin;
-import org.bukkit.plugin.PluginDescriptionFile;
+import org.bukkit.plugin.*;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.*;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLEncoder;
-import java.util.logging.Filter;
-import java.util.logging.Level;
-import java.util.logging.LogRecord;
-import java.util.logging.Logger;
+import java.net.*;
+import java.util.logging.*;
 
 public class mAutoPaste extends JavaPlugin {
     // Default plugin data
