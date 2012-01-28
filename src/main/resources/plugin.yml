@@ -1,7 +1,7 @@
 name: mAutoPaste
 main: in.mDev.MiracleM4n.mAutoPaste.mAutoPaste
 load: startup
-version: 1.1-1
+version: 1.1-2
 author: MiracleM4n
 website: http://mdev.in/
 description: AutoPasteBin onError
