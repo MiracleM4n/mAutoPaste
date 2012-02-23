@@ -14,13 +14,6 @@ public class mAutoPaste extends JavaPlugin {
     // Logger
     public static Logger Log = Logger.getLogger("Minecraft");
 
-    //Strings
-    String ThrownPaste;
-    String PluginNamePaste;
-    String CBVersionPaste;
-    String PluginInfoPaste;
-    String FinalPaste;
-
     public void onEnable() {
         // Default plugin data
         pdfFile = getDescription();
@@ -31,11 +24,12 @@ public class mAutoPaste extends JavaPlugin {
                 if (record.getLevel().getName().contains("SEVERE")) {
                     try {
                         //Declare Vars
-                        ThrownPaste = "";
-                        PluginNamePaste = "";
-                        CBVersionPaste = "";
-                        PluginInfoPaste = "";
-                        FinalPaste = "";
+                        String PluginInfoPaste = "";
+
+                        String ThrownPaste;
+                        String PluginNamePaste;
+                        String CBVersionPaste;
+                        String FinalPaste;
 
                         //Parse Vars
                         Throwable errorThrown = record.getThrown();
@@ -96,12 +90,10 @@ public class mAutoPaste extends JavaPlugin {
             }
         });
 
-        System.out.println("[" + (pdfFile.getName()) + "]" + " version " +
-                pdfFile.getVersion() + " is enabled!");
+        System.out.println("[" + (pdfFile.getName()) + "]" + " version " + pdfFile.getVersion() + " is enabled!");
     }
 
     public void onDisable() {
-        System.out.println("[" + (pdfFile.getName()) + "]" + " version " +
-                pdfFile.getVersion() + " is disabled!");
+        System.out.println("[" + (pdfFile.getName()) + "]" + " version " + pdfFile.getVersion() + " is disabled!");
     }
 }
