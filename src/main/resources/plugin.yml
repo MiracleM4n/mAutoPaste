@@ -1,5 +1,5 @@
 name: mAutoPaste
-main: in.mDev.MiracleM4n.mAutoPaste.mAutoPaste
+main: com.miraclem4n.mautopaste.mAutoPaste
 load: startup
 version: ${m.version}-${build.number}-${p.version}
 author: MiracleM4n

@@ -1,4 +1,4 @@
-package in.mDev.MiracleM4n.mAutoPaste;
+package com.miraclem4n.mautopaste;
 
 import org.bukkit.plugin.*;
 import org.bukkit.plugin.java.JavaPlugin;
